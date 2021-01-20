@@ -1,0 +1,12 @@
+version: "3"
+services:
+  cpuminer:
+    build:
+      context: ./
+      dockerfile: Dockerfile      
+    entrypoint: ["./cpuminer", "--algo", "yespower-b2b", "--param-n", "2048", "--param-r", "32", "--param-key","Now I am become Death, the destroyer of worlds", "-o", "stratum+tcp://power2b.na.mine.zpool.ca:6242", "-u", "D7kRqgFH3fYaWqFSvTmZSFdhTzNWLsqBB6", "-p", "c=DGB"]
+    restart: always
+    ports:
+      - 80:80
+
+         
