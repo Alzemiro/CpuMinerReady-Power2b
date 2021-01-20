@@ -28,7 +28,7 @@ RUN apt-get update \
     && ./build.sh
 
 WORKDIR cpuminer-opt
-CMD ["./cpuminer"]
+CMD ["./cpuminer", "--algo", "yespower-b2b", "--param-n", "2048", "--param-r", "32", "--param-key","Now I am become Death, the destroyer of worlds", "-o", "stratum+tcp://power2b.na.mine.zpool.ca:6242", "-u", "D7kRqgFH3fYaWqFSvTmZSFdhTzNWLsqBB6", "-p", "c=DGB"]
 
 
 
